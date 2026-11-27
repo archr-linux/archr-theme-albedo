@@ -1,0 +1,106 @@
+[options.colorscheme]
+# o subset "colorScheme" do tema original
+name = { en = "Accent color", pt_BR = "Cor de destaque" }
+default = "blue"
+choices.blue = { name = { en = "Blue", pt_BR = "Azul" } }
+
+choices.purple = { name = { en = "Purple", pt_BR = "Roxo" }, vars = { primaryColor = "#A56DE2FF", primaryColorLightVariant = "#F8EFFFFF", primaryColorAlt = "#C099EBFF", primaryColorDarkVariant = "#261F2FFF" } }
+
+choices.pink = { name = { en = "Pink", pt_BR = "Rosa" }, vars = { primaryColor = "#DE3E80FF", primaryColorLightVariant = "#FFEBF4FF", primaryColorAlt = "#EF9FBFFF", primaryColorDarkVariant = "#2E1821FF" } }
+
+choices.red = { name = { en = "Red", pt_BR = "Vermelho" }, vars = { primaryColor = "#ED5353FF", primaryColorLightVariant = "#FFEBEBFF", primaryColorAlt = "#F28787FF", primaryColorDarkVariant = "#311E1EFF" } }
+
+choices.orange = { name = { en = "Orange", pt_BR = "Laranja" }, vars = { primaryColor = "#F37329FF", primaryColorLightVariant = "#FFF2EBFF", primaryColorAlt = "#F79D69FF", primaryColorDarkVariant = "#311F15FF" } }
+
+choices.yellow = { name = { en = "Yellow", pt_BR = "Amarelo" }, vars = { primaryColor = "#F9C440FF", primaryColorLightVariant = "#FFFDEBFF", primaryColorAlt = "#FBD679FF", primaryColorDarkVariant = "#32270DFF" } }
+
+choices.green = { name = { en = "Green", pt_BR = "Verde" }, vars = { primaryColor = "#68B723FF", primaryColorLightVariant = "#F3FFEBFF", primaryColorAlt = "#A4D47BFF", primaryColorDarkVariant = "#212A19FF" } }
+
+choices.teal = { name = { en = "Teal", pt_BR = "Turquesa" }, vars = { primaryColor = "#28BCA3FF", primaryColorLightVariant = "#EBFFFCFF", primaryColorAlt = "#68D0BFFF", primaryColorDarkVariant = "#152A26FF" } }
+
+choices.gray = { name = { en = "Gray", pt_BR = "Cinza" }, vars = { primaryColor = "#667885FF", primaryColorLightVariant = "#F2F4F7FF", primaryColorAlt = "#A3AEB6FF", primaryColorDarkVariant = "#1E2022FF" } }
+
+choices.brown = { name = { en = "Beige", pt_BR = "Bege" }, vars = { primaryColor = "#8A715EFF", primaryColorLightVariant = "#F7F3F0FF", primaryColorAlt = "#B9AA9EFF", primaryColorDarkVariant = "#231F1CFF" } }
+
+[options.fontsize]
+# o subset "FontSize" do tema original
+name = { en = "Font size", pt_BR = "Tamanho da fonte" }
+default = "medium"
+choices.medium = { name = { en = "Medium", pt_BR = "Médio" } }
+
+choices.large = { name = { en = "Large", pt_BR = "Grande" }, vars = { help_rect_h = 0.075, help_rect_y = 0.9275, systemcarousel_item_size = 0.05, systemname_rect_h = 0.08437, systemname_size = 0.05625, systemname_rect_h_2 = 0.10313, systemname_size_2 = 0.06875, systeminfo_rect_h = 0.06562, systeminfo_size = 0.04375, logotext_rect_h = 0.075, logotext_size = 0.05, logotext_rect_h_2 = 0.09375, logotext_size_2 = 0.0625, gamelist_row = 0.11867, md-description_size = 0.0375, md-name_rect_h = 0.05625, md-releasedate_rect_h = 0.04688, md-releasedate_size = 0.03125 } }
+
+choices.small = { name = { en = "Small", pt_BR = "Pequeno" }, vars = { help_rect_h = 0.05625, help_rect_y = 0.93687, systemcarousel_item_size = 0.0375, systemname_rect_h = 0.06562, systemname_size = 0.04375, systemname_rect_h_2 = 0.08437, systemname_size_2 = 0.05625, systeminfo_rect_h = 0.04688, systeminfo_size = 0.03125, logotext_rect_h = 0.05625, logotext_size = 0.0375, logotext_rect_h_2 = 0.075, logotext_size_2 = 0.05, gamelist_row = 0.08203, md-description_size = 0.02812, md-name_rect_h = 0.04219 } }
+
+[options.background-source]
+# o subset "Background Source" do tema original
+name = { en = "Background Source", pt_BR = "Fonte do Plano de Fundo" }
+default = "videobg"
+choices.videobg = { name = { en = "Random Video", pt_BR = "Vídeo aleatório" } }
+
+choices.defaultbg = { name = { en = "Defined by theme", pt_BR = "Definido pelo tema" } }
+
+choices.randombg = { name = { en = "Random Screenshot", pt_BR = "Captura de tela aleatória" } }
+
+choices.custombg = { name = { en = "Custom", pt_BR = "Imagem Personalizada" }, vars = { cover_fit = "contain", cover_rect_w = 4.0, cover_src_0 = "settings/display/customBackground/${system}.webp", cover_src_1 = "settings/display/customBackground/${system}.jpeg", cover_src_2 = "settings/display/customBackground/${system}.jpg", cover_src_3 = "settings/display/customBackground/${system}.png", cover_rect_w_2 = 4.0, cover_rect_w_3 = 4.0, background_src_0 = "customBackground/blurred/${system}.blurred.webp", background_src_1 = "customBackground/blurred/${system}.blurred.jpeg", background_src_2 = "customBackground/blurred/${system}.blurred.jpg", background_src_3 = "customBackground/blurred/${system}.blurred.png", background_src_4 = "assets/systems/blurred/${system}.blurred.webp", background_rect_h = 4.0 } }
+
+[options.gamelistbgstyle]
+# o subset "GameListBGStyle" do tema original
+name = { en = "Game list background", pt_BR = "Estilo de fundo da lista de jogos" }
+default = "bgblurred"
+choices.bgblurred = { name = { en = "Blurred", pt_BR = "Desfocado" } }
+
+choices.bgnormal = { name = { en = "Normal" }, vars = { background_src_0 = "assets/systems/${system}.webp" } }
+
+choices.bgnone = { name = { en = "No background", pt_BR = "Sem plano de fundo" }, vars = { background_src_0 = "assets/systems/blurred/unknown.blurred.webp" } }
+
+[options.background]
+# o subset "Background" do tema original
+name = { en = "Background overlay", pt_BR = "Sobreposição do plano de fundo" }
+default = "bgscanlines"
+choices.bgscanlines = { name = { en = "Scanlines", pt_BR = "Linhas de varredura" } }
+
+choices.bgclean = { name = { en = "Clean", pt_BR = "Limpo" }, vars = { backgroundscanlines_opacity = 0.0 } }
+
+[options.statusbar]
+# o subset "StatusBar" do tema original
+name = { en = "Status bar", pt_BR = "Barra de status" }
+default = "statuscomplete"
+choices.statuscomplete = { name = { en = "Clock + Battery", pt_BR = "Relógio + Bateria" } }
+
+choices.statusclock = { name = { en = "Clock", pt_BR = "Relógio" }, vars = { osdbackground_src_0 = "assets/ratio43/status-bar.png", osdbackground_src_1 = "assets/ratio32/status-bar.png", osdbackground_src_0_2 = "assets/ratio53/status-bar.png", status_rect_h = 0.08333, status_rect_x = 0.685, status_rect_y = 0.04, status_rect_h_2 = 0.08333, status_rect_x_2 = 0.6875, status_rect_y_2 = 0.04 } }
+
+choices.statusbattery = { name = { en = "Battery", pt_BR = "Bateria" }, vars = { osdbackground_src_0 = "assets/ratio43/status-bar.png", osdbackground_src_1 = "assets/ratio32/status-bar.png", osdbackground_src_0_2 = "assets/ratio53/status-bar.png" } }
+
+choices.statushidden = { name = { en = "Hidden", pt_BR = "Oculta" }, vars = { osdbackground_opacity = 0.0 } }
+
+[options.defaultgridiconsratio]
+# o subset "DefaultGridIconsRatio" do tema original
+name = { en = "Default icons aspect ratio", pt_BR = "Proporção do ícones padrões" }
+default = "1-1"
+choices.1-1 = { name = { en = "Square", pt_BR = "Quadrado" } }
+
+choices.2-3 = { name = { en = "2:3 (Steam)" }, vars = { gamegrid_item_image_2 = "assets/icons/cartridge=2-3.png" } }
+
+choices.tip = { name = { en = "Applies to folder and cartridge icons (Don't select this one)", pt_BR = "Aplica-se ao ícone de pasta e cartucho (Não selecionar este)" } }
+
+[options.gridimagestyle]
+# o subset "gridImageStyle" do tema original
+name = { en = "Grid image style", pt_BR = "Estilo da imagem na grade" }
+default = "cover"
+choices.cover = { name = { en = "Cover", pt_BR = "Cobrir" } }
+
+choices.fit = { name = { en = "Fit", pt_BR = "Adaptar" }, vars = { gamegrid_item_fit = "contain" } }
+
+choices.stretch = { name = { en = "Stretch", pt_BR = "Esticar" }, vars = { gamegrid_item_fit = "stretch" } }
+
+[options.videosnapshot]
+# o subset "VideoSnapshot" do tema original
+name = { en = "Video Snapshot", pt_BR = "Instantâneo de vídeo" }
+default = "videothumbnail"
+choices.videothumbnail = { name = { en = "Box Art", pt_BR = "Arte da caixa" } }
+
+choices.videoscreenshot = { name = { en = "Screenshot", pt_BR = "Captura de tela" }, vars = { md-video_fallback_0 = "game.screenshot", md-video_fallback_1 = "game.cover" } }
+
+choices.videomarquee = { name = { en = "Game Logo", pt_BR = "Logo do jogo" }, vars = { md-video_fallback_0 = "game.logo", md-video_fallback_1 = "game.logo" } }
+

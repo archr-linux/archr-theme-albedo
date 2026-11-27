@@ -1,0 +1,499 @@
+[view.grid]
+name = { en = "Grid", pt_BR = "Grade" }
+
+[[view.grid.systems.el]]
+id = "help"
+kind = "hints"
+rect = { h = "$help_rect_h", w = 0.96833, x = 0.01667, y = "$help_rect_y" }
+align = "left"
+badge = "$primaryColor"
+color = "$primaryColorLightVariant"
+z = 995
+
+[[view.grid.systems.el]]
+id = "borderoverlay"
+kind = "image"
+src = ["$borderoverlay_src_0", "assets/ratio32/borders.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 400
+
+[[view.grid.systems.el]]
+id = "help-system-background"
+kind = "image"
+src = ["$help-system-background_src_0", "assets/ratio32/help-system-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 360
+
+[[view.grid.systems.el]]
+id = "backgroundscanlines"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+image = "$backgroundscanlines_image"
+opacity = "$backgroundscanlines_opacity"
+slice = 0
+tile = true
+z = 0
+
+[[view.grid.systems.el]]
+id = "systemcarousel"
+kind = "carousel"
+of = "systems"
+axis = "vertical"
+visible = 5
+rect = { h = 1.3, w = 0.33333, x = 0.0, y = 0.0 }
+item = { color = "$primaryColorAlt", font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf", h = 1.0, image = "system.logo", size = "$systemcarousel_item_size", text = "${item.name}", w = 0.2 }
+loop = true
+opacity = 0.5
+selected = { opacity = 1.0, scale = 1.375 }
+wheel = { angle = 5.0, pivot = ["$systemcarousel_wheel_pivot_0", 0.5] }
+z = 160
+
+[[view.grid.systems.el]]
+id = "systemname"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h", w = 0.6125, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size"
+upper = true
+when = { aspect = ["classic"] }
+z = 40
+
+[[view.grid.systems.el]]
+id = "systemname-square"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h", w = 0.6125, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size"
+upper = true
+when = { aspect = ["square"] }
+z = 40
+
+[[view.grid.systems.el]]
+id = "systemname-wide"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h_2", w = 0.48, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size_2"
+upper = true
+when = { aspect = ["wide"] }
+z = 40
+
+[[view.grid.systems.el]]
+id = "systeminfo"
+kind = "text"
+text = "${system.games}"
+rect = { h = "$systeminfo_rect_h", w = "$systeminfo_rect_w", x = 0.3875, y = 0.05 }
+color = "#FFFFFFCC"
+enter = { duration = 0.6 }
+font = "assets/fonts/Teko/Teko-Medium.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systeminfo_size"
+upper = true
+z = 40
+
+[[view.grid.systems.el]]
+id = "cover-fallback"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+image = "assets/background.png"
+tint = "#121212FF"
+slice = 0
+tile = true
+z = -44
+
+[[view.grid.systems.el]]
+id = "cover"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["classic"] }
+z = -40
+
+[[view.grid.systems.el]]
+id = "cover-square"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_2", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["square"] }
+z = -40
+
+[[view.grid.systems.el]]
+id = "cover-wide"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_3", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["wide"] }
+z = -40
+
+[[view.grid.systems.el]]
+id = "carouselbackground"
+kind = "image"
+src = ["$carouselbackground_src_0", "assets/ratio32/carousel-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 0
+
+[[view.grid.systems.el]]
+id = "osdbackground"
+kind = "image"
+src = ["$osdbackground_src_0", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 4
+
+[[view.grid.systems.el]]
+id = "osdbackground-square"
+kind = "image"
+src = ["$osdbackground_src_0", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 4
+
+[[view.grid.systems.el]]
+id = "osdbackground-wide"
+kind = "image"
+src = ["$osdbackground_src_0_2", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 4
+
+[[view.grid.systems.el]]
+id = "status"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 996
+
+[[view.grid.systems.el]]
+id = "status-square"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 996
+
+[[view.grid.systems.el]]
+id = "status-wide"
+kind = "status"
+rect = { h = "$status_rect_h_2", w = 0.3, x = "$status_rect_x_2", y = "$status_rect_y_2" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 996
+
+[[view.grid.games.el]]
+id = "logotext"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size"
+upper = true
+when = { aspect = ["classic"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "logotext-square"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size"
+upper = true
+when = { aspect = ["square"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "logotext-wide"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h_2", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size_2"
+upper = true
+when = { aspect = ["wide"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "md-name"
+kind = "text"
+text = "${game.name}"
+rect = { h = 0.03125, w = 0.50833, x = 0.03333, y = 0.15 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.025, duration = 0.3, from = "bottom" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+size = "$md-description_size"
+when = { aspect = ["classic"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "md-name-square"
+kind = "text"
+text = "${game.name}"
+rect = { h = 0.03125, w = 0.50833, x = 0.03333, y = 0.15 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.025, duration = 0.3, from = "bottom" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+size = "$md-description_size"
+when = { aspect = ["square"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "md-name-wide"
+kind = "text"
+text = "${game.name}"
+rect = { h = "$md-name_rect_h", w = 0.58, x = 0.03333, y = 0.15 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.025, duration = 0.3, from = "bottom" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+size = "$md-description_size"
+when = { aspect = ["wide"] }
+z = 40
+
+[[view.grid.games.el]]
+id = "help"
+kind = "hints"
+rect = { h = "$help_rect_h", w = 0.96833, x = 0.01667, y = "$help_rect_y" }
+align = "left"
+badge = "$primaryColor"
+color = "$primaryColorLightVariant"
+z = 995
+
+[[view.grid.games.el]]
+id = "background"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = 1.0, w = "$cover_rect_w", x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["classic"] }
+z = -20
+
+[[view.grid.games.el]]
+id = "background-square"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_2", x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["square"] }
+z = -20
+
+[[view.grid.games.el]]
+id = "background-wide"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = "$background_rect_h", w = 1.0, x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["wide"] }
+z = -20
+
+[[view.grid.games.el]]
+id = "md-rating"
+kind = "rating"
+rect = { h = 0.04375, w = "$md-rating_rect_w", x = "$md-rating_rect_x", y = 0.12812 }
+anchor = "left"
+color = "$primaryColor"
+empty = "$primaryColorAlt"
+empty_opacity = 0.4
+enter = { distance = 0.025, duration = 0.3, from = "bottom" }
+size = 0.04375
+spacing = 0.0
+star = "assets/icons/star.svg"
+z = 160
+
+[[view.grid.games.el]]
+id = "md-releasedate"
+kind = "text"
+text = "${game.year}"
+rect = { h = "$md-releasedate_rect_h", w = "$md-releasedate_rect_w", x = "$md-releasedate_rect_x", y = 0.15 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.025, duration = 0.6, from = "bottom" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+size = "$md-releasedate_size"
+z = 40
+
+[[view.grid.games.el]]
+id = "gamegrid"
+kind = "grid"
+of = "games"
+columns = "$gamegrid_columns"
+rows = 2
+rect = { h = 0.625, w = 0.86667, x = 0.06667, y = 0.25 }
+enter = { distance = 0.05, duration = 0.3, from = "bottom" }
+item = { fit = "$gamegrid_item_fit", font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf", image = ["game.screenshot", "game.cover", "$gamegrid_item_image_2"], logo = "game.logo", radius = 0.0, size = "$md-description_size" }
+loop = false
+selected = { frame = { color = "$primaryColorAlt", radius = 0.012, width = "$gamegrid_selected_frame_width" }, opacity = 1.0, scale = 1.075 }
+spacing = 0.05
+z = 80
+
+[[view.grid.games.el]]
+id = "borderoverlay"
+kind = "image"
+src = ["$borderoverlay_src_0", "assets/ratio32/borders.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 400
+
+[[view.grid.games.el]]
+id = "help-system-background"
+kind = "image"
+src = ["$help-system-background_src_0", "assets/ratio32/help-system-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 360
+
+[[view.grid.games.el]]
+id = "backgroundscanlines"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+image = "$backgroundscanlines_image"
+opacity = "$backgroundscanlines_opacity"
+slice = 0
+tile = true
+z = 0
+
+[[view.grid.games.el]]
+id = "md-releasedate-icon"
+kind = "image"
+src = ["$md-releasedate-icon_src_0", "assets/icons/16x16/calendar=default.png"]
+rect = { h = "$md-releasedate-icon_rect_h", w = "$md-releasedate-icon_rect_w", x = "$md-releasedate-icon_rect_x", y = 0.15 }
+anchor = "left"
+enter = { distance = 0.025, duration = 0.6, from = "bottom" }
+fit = "stretch"
+tint = "$primaryColor"
+z = 40
+
+[[view.grid.games.el]]
+id = "grid-background"
+kind = "image"
+src = ["$grid-background_src_0", "assets/ratio32/gamelist-grid-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 20
+
+[[view.grid.games.el]]
+id = "status"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 996
+
+[[view.grid.games.el]]
+id = "status-square"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 996
+
+[[view.grid.games.el]]
+id = "status-wide"
+kind = "status"
+rect = { h = "$status_rect_h_2", w = 0.3, x = "$status_rect_x_2", y = "$status_rect_y_2" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 996
+
+# Detalhes: a tela de jogos com a capa, a ficha e os botões no lugar da lista.
+[view.grid.details]
+base = "games"
+remove = ["gamegrid"]
+
+[[view.grid.details.el]]
+id = "fundo-ficha"
+kind = "rect"
+rect = { h = 0.655, w = 0.83667, x = 0.08167, y = 0.235 }
+fill = "#00000099"
+radius = 0.012
+z = 899
+
+[[view.grid.details.el]]
+id = "capa"
+kind = "image"
+src = ["game.cover", "game.screenshot"]
+rect = { h = 0.3125, w = 0.80667, x = 0.09667, y = 0.25 }
+radius = 0.01
+z = 900
+
+[[view.grid.details.el]]
+id = "ficha"
+kind = "fields"
+rows = [
+  { label = "@genre", value = "${game.genre}" },
+  { label = "@players", value = "${game.players}" },
+  { label = "@developer", value = "${game.developer}" },
+  { label = "@last_played", value = "${game.last_played}" },
+]
+rect = { h = 0.2, w = 0.80667, x = 0.09667, y = 0.58125 }
+size = 0.02975
+upper_labels = true
+z = 900
+
+[[view.grid.details.el]]
+id = "botoes"
+kind = "actions"
+rect = { h = 0.0625, w = 0.80667, x = 0.09667, y = 0.8 }
+z = 900

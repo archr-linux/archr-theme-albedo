@@ -1,0 +1,12 @@
+# Albedo, by mluizvitor (MIT), for EmulationStation; converted for the Arch R launcher.
+include = ["parts/vars.toml", "parts/options.toml", "parts/view-detailed.toml", "parts/view-video.toml", "parts/view-grid.toml", "parts/view-grid-detailed.toml"]
+name = "Albedo"
+description = { en = "Albedo by mluizvitor, from EmulationStation: tilted system cards, a vertical name and art across the screen.", pt_BR = "Albedo de mluizvitor, vindo do EmulationStation: cartões inclinados, nome na vertical e arte na tela toda." }
+author = "mluizvitor (original); Arch R (conversion)"
+version = "1.0.0"
+license = "MIT"
+accent = "$primaryColorAlt"
+accent_text = "$primaryColorDarkVariant"
+background = "#000000"
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+text = "$primaryColorLightVariant"

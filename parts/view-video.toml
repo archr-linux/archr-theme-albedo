@@ -1,0 +1,469 @@
+[view.video]
+name = { en = "Video", pt_BR = "Com vídeo" }
+
+[[view.video.systems.el]]
+id = "help"
+kind = "hints"
+rect = { h = "$help_rect_h", w = 0.96833, x = 0.01667, y = "$help_rect_y" }
+align = "left"
+badge = "$primaryColor"
+color = "$primaryColorLightVariant"
+z = 995
+
+[[view.video.systems.el]]
+id = "borderoverlay"
+kind = "image"
+src = ["$borderoverlay_src_0", "assets/ratio32/borders.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 400
+
+[[view.video.systems.el]]
+id = "help-system-background"
+kind = "image"
+src = ["$help-system-background_src_0", "assets/ratio32/help-system-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 360
+
+[[view.video.systems.el]]
+id = "backgroundscanlines"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+image = "$backgroundscanlines_image"
+opacity = "$backgroundscanlines_opacity"
+slice = 0
+tile = true
+z = 0
+
+[[view.video.systems.el]]
+id = "systemcarousel"
+kind = "carousel"
+of = "systems"
+axis = "vertical"
+visible = 5
+rect = { h = 1.3, w = 0.33333, x = 0.0, y = 0.0 }
+item = { color = "$primaryColorAlt", font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf", h = 1.0, image = "system.logo", size = "$systemcarousel_item_size", text = "${item.name}", w = 0.2 }
+loop = true
+opacity = 0.5
+selected = { opacity = 1.0, scale = 1.375 }
+wheel = { angle = 5.0, pivot = ["$systemcarousel_wheel_pivot_0", 0.5] }
+z = 160
+
+[[view.video.systems.el]]
+id = "systemname"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h", w = 0.6125, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size"
+upper = true
+when = { aspect = ["classic"] }
+z = 40
+
+[[view.video.systems.el]]
+id = "systemname-square"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h", w = 0.6125, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size"
+upper = true
+when = { aspect = ["square"] }
+z = 40
+
+[[view.video.systems.el]]
+id = "systemname-wide"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$systemname_rect_h_2", w = 0.48, x = 0.34375, y = 0.05 }
+color = "#FFFFFFFF"
+enter = { distance = 0.02, duration = 0.3, from = "left" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systemname_size_2"
+upper = true
+when = { aspect = ["wide"] }
+z = 40
+
+[[view.video.systems.el]]
+id = "systeminfo"
+kind = "text"
+text = "${system.games}"
+rect = { h = "$systeminfo_rect_h", w = "$systeminfo_rect_w", x = 0.3875, y = 0.05 }
+color = "#FFFFFFCC"
+enter = { duration = 0.6 }
+font = "assets/fonts/Teko/Teko-Medium.ttf"
+pivot = [0.0, 0.5]
+rotate = 90.0
+size = "$systeminfo_size"
+upper = true
+z = 40
+
+[[view.video.systems.el]]
+id = "cover-fallback"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+image = "assets/background.png"
+tint = "#121212FF"
+slice = 0
+tile = true
+z = -44
+
+[[view.video.systems.el]]
+id = "cover"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["classic"] }
+z = -40
+
+[[view.video.systems.el]]
+id = "cover-square"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_2", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["square"] }
+z = -40
+
+[[view.video.systems.el]]
+id = "cover-wide"
+kind = "image"
+src = ["$cover_src_0", "$cover_src_1", "$cover_src_2", "$cover_src_3", "assets/systems/${system}.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_3", x = 0.71667, y = 0.5 }
+anchor = "center"
+enter = { distance = 0.03333, duration = 0.5, from = "left" }
+fit = "$cover_fit"
+when = { aspect = ["wide"] }
+z = -40
+
+[[view.video.systems.el]]
+id = "carouselbackground"
+kind = "image"
+src = ["$carouselbackground_src_0", "assets/ratio32/carousel-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 0
+
+[[view.video.systems.el]]
+id = "osdbackground"
+kind = "image"
+src = ["$osdbackground_src_0", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 4
+
+[[view.video.systems.el]]
+id = "osdbackground-square"
+kind = "image"
+src = ["$osdbackground_src_0", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 4
+
+[[view.video.systems.el]]
+id = "osdbackground-wide"
+kind = "image"
+src = ["$osdbackground_src_0_2", "$osdbackground_src_1"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 4
+
+[[view.video.systems.el]]
+id = "status"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 996
+
+[[view.video.systems.el]]
+id = "status-square"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 996
+
+[[view.video.systems.el]]
+id = "status-wide"
+kind = "status"
+rect = { h = "$status_rect_h_2", w = 0.3, x = "$status_rect_x_2", y = "$status_rect_y_2" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 996
+
+[[view.video.games.el]]
+id = "logotext"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size"
+upper = true
+when = { aspect = ["classic"] }
+z = 40
+
+[[view.video.games.el]]
+id = "logotext-square"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size"
+upper = true
+when = { aspect = ["square"] }
+z = 40
+
+[[view.video.games.el]]
+id = "logotext-wide"
+kind = "text"
+text = "${system.name}"
+rect = { h = "$logotext_rect_h_2", w = 0.7, x = 0.03333, y = 0.075 }
+anchor = "left"
+color = "$primaryColorLightVariant"
+enter = { distance = 0.026, duration = 0.3, from = "bottom" }
+font = "assets/fonts/Teko/Teko-SemiBold.ttf"
+size = "$logotext_size_2"
+upper = true
+when = { aspect = ["wide"] }
+z = 40
+
+[[view.video.games.el]]
+id = "help"
+kind = "hints"
+rect = { h = "$help_rect_h", w = 0.96833, x = 0.01667, y = "$help_rect_y" }
+align = "left"
+badge = "$primaryColor"
+color = "$primaryColorLightVariant"
+z = 995
+
+[[view.video.games.el]]
+id = "gamelist"
+kind = "list"
+rect = { h = 0.775, w = 0.43333, x = 0.0, y = 0.15 }
+color = "$primaryColorLightVariant"
+enter = { distance = 0.025, duration = 0.3, from = "bottom" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+radius = 0.0
+row = "$gamelist_row"
+scroll = "center"
+selected = { color = "$primaryColorDarkVariant", fill = "$primaryColorAlt" }
+size = "$systeminfo_size"
+z = 80
+
+[[view.video.games.el]]
+id = "background"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = 1.0, w = "$cover_rect_w", x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["classic"] }
+z = -20
+
+[[view.video.games.el]]
+id = "background-square"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = 1.0, w = "$cover_rect_w_2", x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["square"] }
+z = -20
+
+[[view.video.games.el]]
+id = "background-wide"
+kind = "image"
+src = ["$background_src_0", "$background_src_1", "$background_src_2", "$background_src_3", "$background_src_4", "assets/systems/blurred/unknown.blurred.webp"]
+rect = { h = "$background_rect_h", w = 1.0, x = 0.5, y = 0.5 }
+anchor = "center"
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+fit = "$cover_fit"
+opacity = 0.4
+when = { aspect = ["wide"] }
+z = -20
+
+[[view.video.games.el]]
+id = "md-rating"
+kind = "rating"
+rect = { h = 0.04375, w = "$md-rating_rect_w", x = 0.81667, y = 0.6625 }
+anchor = "left"
+color = "$primaryColor"
+empty = "$primaryColorAlt"
+empty_opacity = 0.4
+enter = { distance = 0.03333, duration = 0.3, from = "right" }
+size = 0.04375
+spacing = 0.0
+star = "assets/icons/star.svg"
+z = 160
+
+[[view.video.games.el]]
+id = "md-description"
+kind = "text"
+text = "${game.description}"
+rect = { h = 0.175, w = 0.5, x = 0.46667, y = 0.725 }
+color = "#FFFFFFFF"
+enter = { distance = 0.03333, duration = 0.3, from = "right" }
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+line = 0.99
+size = "$md-description_size"
+wrap = true
+z = 160
+
+[[view.video.games.el]]
+id = "md-video"
+kind = "video"
+src = "game.video"
+fallback = ["$md-video_fallback_0", "$md-video_fallback_1"]
+rect = { h = 0.5, w = 0.5, x = 0.71667, y = 0.425 }
+anchor = "center"
+delay = 1.0
+fit = "contain"
+radius = 0.02
+z = 16
+
+[[view.video.games.el]]
+id = "borderoverlay"
+kind = "image"
+src = ["$borderoverlay_src_0", "assets/ratio32/borders.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 400
+
+[[view.video.games.el]]
+id = "help-system-background"
+kind = "image"
+src = ["$help-system-background_src_0", "assets/ratio32/help-system-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 360
+
+[[view.video.games.el]]
+id = "backgroundscanlines"
+kind = "frame"
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+enter = { duration = 0.3, fade = false, scale = 1.1 }
+image = "$backgroundscanlines_image"
+opacity = "$backgroundscanlines_opacity"
+slice = 0
+tile = true
+z = 0
+
+[[view.video.games.el]]
+id = "detailed-background"
+kind = "image"
+src = ["$detailed-background_src_0", "assets/ratio32/gamelist-detailed-bg.png"]
+rect = { h = 1.0, w = 1.0, x = 0.0, y = 0.0 }
+fit = "stretch"
+z = 20
+
+[[view.video.games.el]]
+id = "status"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["classic"] }
+z = 996
+
+[[view.video.games.el]]
+id = "status-square"
+kind = "status"
+rect = { h = "$status_rect_h", w = 0.3, x = "$status_rect_x", y = "$status_rect_y" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["square"] }
+z = 996
+
+[[view.video.games.el]]
+id = "status-wide"
+kind = "status"
+rect = { h = "$status_rect_h_2", w = 0.3, x = "$status_rect_x_2", y = "$status_rect_y_2" }
+color = "#FFFFFFFF"
+opacity = "$osdbackground_opacity"
+when = { aspect = ["wide"] }
+z = 996
+
+# Detalhes: a tela de jogos com a capa, a ficha e os botões no lugar da lista.
+[view.video.details]
+base = "games"
+remove = ["gamelist"]
+
+[[view.video.details.el]]
+id = "md-description"
+long_text = "scroll"
+
+[[view.video.details.el]]
+id = "fundo-ficha"
+kind = "rect"
+rect = { h = 0.801, w = 0.40733, x = 0.013, y = 0.137 }
+fill = "#00000099"
+radius = 0.012
+z = 899
+
+[[view.video.details.el]]
+id = "capa"
+kind = "image"
+src = ["game.cover", "game.screenshot"]
+rect = { h = 0.3875, w = 0.38133, x = 0.026, y = 0.15 }
+radius = 0.01
+z = 900
+
+[[view.video.details.el]]
+id = "ficha"
+kind = "fields"
+rows = [
+  { label = "@genre", value = "${game.genre}" },
+  { label = "@players", value = "${game.players}" },
+  { label = "@developer", value = "${game.developer}" },
+  { label = "@last_played", value = "${game.last_played}" },
+]
+rect = { h = 0.248, w = 0.38133, x = 0.026, y = 0.56075 }
+size = 0.03187
+upper_labels = true
+z = 900
+font = "assets/fonts/FiraSansCondensed/FiraSansCondensed-Medium.ttf"
+color = "#EBF5FFFF"
+label_color = "#72ACEDFF"
+
+[[view.video.details.el]]
+id = "botoes"
+kind = "actions"
+rect = { h = 0.075, w = 0.38133, x = 0.026, y = 0.832 }
+z = 900
